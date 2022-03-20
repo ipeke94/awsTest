@@ -59,6 +59,10 @@ provider:
 #    - include-me-dir/**
 
 functions:
+  api:
+    handler: src/api/api.handler
+    events:
+      - http: GET /api
   hello:
     handler: handler.hello
   helloworld:
@@ -67,8 +71,6 @@ functions:
     handler: src/api/todo.handler
   todos:
     handler: src/api/todos.handler
-  api:
-    handler: src/api/api.handler
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
